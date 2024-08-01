@@ -5,7 +5,6 @@ from apps.todo.api.views import ToDoCreateView, ToDoDetaliView, ToDoDestroyView,
 
 app_name = 'todo'
 
-
 urlpatterns = [
     path('todolist/', ToDoListView.as_view(), name='todo-list'),
     path('tododetail/<slug:slug>/', ToDoDetaliView.as_view(), name='todo-detail'),
