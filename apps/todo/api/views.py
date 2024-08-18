@@ -1,6 +1,6 @@
 from rest_framework.generics import ListAPIView, RetrieveAPIView, CreateAPIView, UpdateAPIView, DestroyAPIView
 
-from apps.todo.api.serializer import ToDoSerializer
+from .serializer import ToDoSerializer
 from apps.todo.models import ToDo
 
 

@@ -1,6 +1,6 @@
 from django.urls import path
 
-from apps.todo.api.views import ToDoCreateView, ToDoDetaliView, ToDoDestroyView, ToDoListView, ToDoUpdateView
+from .views import ToDoCreateView, ToDoDetaliView, ToDoDestroyView, ToDoListView, ToDoUpdateView
 
 
 app_name = 'todo'

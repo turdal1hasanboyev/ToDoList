@@ -24,13 +24,13 @@ from django.views.static import serve
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('ckeditor/', include('ckeditor_uploader.urls')),
-
     path('api/todo/', include('apps.todo.api.urls')),
 
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
 ]
+
+handler404 = "config.errors.page_not_found_view"
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
